@@ -1,0 +1,16 @@
+fold 0 390s
+fold 1 780s
+fold 2 1154s
+fold 3 1478s
+fold 4 1857s
+lr30+svc1              argmax=0.4287  hung=0.4787
+lr_c30                 argmax=0.4198  hung=0.4779
+blend_c30_raw0.2       argmax=0.4198  hung=0.4765
+blend_c30_raw0.35      argmax=0.4205  hung=0.4754
+lr_c10                 argmax=0.4164  hung=0.4746
+lr_c100                argmax=0.4202  hung=0.4739
+blend_svc1_raw0.35     argmax=0.4216  hung=0.4731
+blend_svc1_raw0.2      argmax=0.4268  hung=0.4724
+svc_c0.5               argmax=0.4302  hung=0.4702
+svc_c1                 argmax=0.4290  hung=0.4613
+lr_raw                 argmax=0.3561  hung=0.4609
