@@ -1,0 +1,36 @@
+# Handoff for the next daily session (task fires 22:03 UTC; Kaggle budgets reset 00:00 UTC)
+
+## Account / tooling
+* Kaggle user `gwey1025`; CLI 2.2.5 with `KAGGLE_API_TOKEN`. The cloud egress IP is shared and Kaggle rate-limits it
+  (HTTP 429, retry-after up to 20 min) - make few API calls, never poll faster than 1/min.
+* GitHub: `gh` is blocked in the cloud session; plain `git` works but push needs a preemptive header:
+  `git -c http.extraHeader="Authorization: Basic $(printf 'acco-cyber:<PAT>' | base64 -w0)" push origin main`.
+* Scoring reruns of the GPU notebooks take ~8 h; results appear in `kaggle competitions submissions name-that-llm`.
+* Max 2 concurrent GPU notebook sessions (commits). Commit runs of s10+ take ~2-5 min (short-circuit).
+
+## Submitting a committed notebook (code competition)
+`kaggle competitions submit name-that-llm -k gwey1025/<kernel> -v <version> -f submission.parquet -m "<description>"`
+
+## State at 2026-10-26 23:30 UTC
+| kernel | version | content | status |
+|---|---|---|---|
+| ntl-s10-nlmv27-llama-rerun | 2 | public 0.651 recipe + Llama member | submit at 00:00 10-27 |
+| ntl-s11-softcap-t05-thr015 | 1 | + soft-cap tau 0.5, cut 0.15 | submit 10-27 |
+| ntl-s12-softcap-t05-thr008 | 1 | + soft-cap tau 0.5, cut 0.08 | submit 10-27 |
+| ntl-s13-softcap-t10-thr015 | 1 | + soft-cap tau 1.0, cut 0.15 | submit 10-27 |
+| ntl-s14-softcap-t05-thr004 | 1 | + soft-cap tau 0.5, cut 0.04 (robustness probe) | submit 10-27 |
+
+## Decision rules once the 10-27 scores land (~08:00-10:00 UTC)
+* s10 should be ~0.651 (sanity). If s10 < 0.643 something in the Llama member differs - compare with s07.
+* soft-cap gain = s11 - s10. tau direction = sign(s13 - s11). cut direction = s12 vs s11, s14 vs s11.
+* If s14 >= s11: clusters can be merged aggressively -> next: cut 0.02 / cap 18 with soft-cap, and let the centred twins
+  (adapt_w) use them. If s14 << s11: impurity also hurts the probability members -> keep cut >= 0.08 and work on
+  model-aware clustering (block merges whose confident label sets overlap).
+* Keep one of the 5 daily slots in reserve until the morning scores are in.
+
+## Beyond post-processing (needed for 0.70+; leaderboard top 0.710 / 0.702 / 0.690)
+1. New trained members: fold-averaged LoRA on Qwen3-14B-Base with the 120k-row `nlm_pool_v5` (prompt_key groups) in
+   addition to train - the public v5 adapters used a smaller pool. Training = GPU hours (est. 4-6 h T4x2 per member);
+   inference is charged to the scoring rerun, not the quota. Start from `lucasboesen/name-that-llm-train-lora24-s7`.
+2. Better test-prompt recovery (sentence embeddings + TF-IDF; label-aware merging) - every group-level member benefits.
+3. Pseudo-labelling the hidden test inside the rerun (self-training the cheap heads on confident rows) - zero extra GPU.
