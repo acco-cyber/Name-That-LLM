@@ -1,0 +1,19 @@
+{
+ "id": "gwey1025/ntl-s08c-cpu-pool-robust-clusters",
+ "title": "ntl-s08c-cpu-pool-robust-clusters",
+ "code_file": "ntl-s08c-cpu-pool-robust-clusters.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "dataset_sources": [
+  "dhruvtibarewal/nlm-matched-clean"
+ ],
+ "competition_sources": [
+  "name-that-llm"
+ ],
+ "kernel_sources": [],
+ "model_sources": []
+}
