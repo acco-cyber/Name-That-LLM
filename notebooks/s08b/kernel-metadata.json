@@ -1,0 +1,19 @@
+{
+ "id": "gwey1025/ntl-s08b-cpu-pool-centred-hungarian",
+ "title": "ntl-s08b-cpu-pool-centred-hungarian",
+ "code_file": "ntl-s08b-cpu-pool-centred-hungarian.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_tpu": false,
+ "enable_internet": false,
+ "dataset_sources": [
+  "dhruvtibarewal/nlm-matched-clean"
+ ],
+ "competition_sources": [
+  "name-that-llm"
+ ],
+ "kernel_sources": [],
+ "model_sources": []
+}
