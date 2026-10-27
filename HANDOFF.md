@@ -11,14 +11,17 @@
 ## Submitting a committed notebook (code competition)
 `kaggle competitions submit name-that-llm -k gwey1025/<kernel> -v <version> -f submission.parquet -m "<description>"`
 
-## State at 2026-10-26 23:30 UTC
+## State at 2026-10-27 00:30 UTC
 | kernel | version | content | status |
 |---|---|---|---|
-| ntl-s10-nlmv27-llama-rerun | 2 | public 0.651 recipe + Llama member | submit at 00:00 10-27 |
-| ntl-s11-softcap-t05-thr015 | 1 | + soft-cap tau 0.5, cut 0.15 | submit 10-27 |
-| ntl-s12-softcap-t05-thr008 | 1 | + soft-cap tau 0.5, cut 0.08 | submit 10-27 |
-| ntl-s13-softcap-t10-thr015 | 1 | + soft-cap tau 1.0, cut 0.15 | submit 10-27 |
-| ntl-s14-softcap-t05-thr004 | 1 | + soft-cap tau 0.5, cut 0.04 (robustness probe) | submit 10-27 |
+| ntl-s10-nlmv27-llama-rerun | 2 | public 0.651 recipe + Llama member | **submitted 10-27 00:01, ref 57681742** |
+| ntl-s11-softcap-t05-thr015 | 1 | + soft-cap tau 0.5, cut 0.15 | **submitted 10-27 00:07** |
+| ntl-s12-softcap-t05-thr008 | 1 | + soft-cap tau 0.5, cut 0.08 | **submitted 10-27 00:16** |
+| ntl-s13-softcap-t10-thr015 | 1 | + soft-cap tau 1.0, cut 0.15 | **submitted 10-27 00:25** |
+| ntl-s14-softcap-t05-thr004 | 1 | + soft-cap tau 0.5, cut 0.04 (robustness probe) | committed, NOT submitted - 1 slot of 10-27 left in reserve |
+
+The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s10-s13 scores: use that slot before
+00:00 UTC on the best-informed variant (s14 as committed, or a new one), then the 10-28 budget opens.
 
 ## Decision rules once the 10-27 scores land (~08:00-10:00 UTC)
 * s10 should be ~0.651 (sanity). If s10 < 0.643 something in the Llama member differs - compare with s07.
