@@ -37,3 +37,16 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
    inference is charged to the scoring rerun, not the quota. Start from `lucasboesen/name-that-llm-train-lora24-s7`.
 2. Better test-prompt recovery (sentence embeddings + TF-IDF; label-aware merging) - every group-level member benefits.
 3. Pseudo-labelling the hidden test inside the rerun (self-training the cheap heads on confident rows) - zero extra GPU.
+
+## Update 2026-10-27 22:55 UTC (hourly run)
+* s10-s13 finished with NO public score: they timed out on the newer Kaggle image (17b2fc). The soft-cap
+  decoding (s11-s13) is therefore still unmeasured on the real stack.
+* The 10-27 slot was used at 19:49 for `ntl-s14-llama-byod` v? (archived in `notebooks/s14-llama-byod`):
+  s10 pinned to the nlm-v27 container that scored for s07 + ATLAS budget 8.3h->7.8h. Score pending (~8 h rerun).
+  NTL 10-27 budget is fully used; 5 new slots open 00:00 UTC 10-28.
+* Plan for 10-28: if s14 scores (~0.651), re-commit s11/s12/s13 with the s14 container pin and time budget
+  and submit them one per hourly run. If s14 also times out, cut ATLAS further / drop a LoRA member first.
+* Leaderboard 10-27 22:45 UTC: 0.728 / 0.707 / 0.704 / 0.702. Public notebooks still top out at 0.651
+  (kirilltym Fresh32 is unscored and depends on private datasets, not forkable).
+* Coordination: runs fire hourly at :42 and can overlap. Check `kaggle competitions submissions` before
+  every submit and append to RUNLOG.md.

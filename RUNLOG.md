@@ -1,0 +1,2 @@
+- 2026-10-27 19:49 UTC  s14-llama-byod submitted (pinned container), pending
+- 2026-10-27 22:55 UTC  no NTL slot left for 10-27; s14 archived, handoff updated
