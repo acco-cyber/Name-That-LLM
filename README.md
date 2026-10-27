@@ -21,7 +21,8 @@ Daily log: see `notebooks/*/NOTES.md`.
 
 ## Scores so far (public LB, 2026-10-26)
 s07 (nlm-v27 fork, Llama skipped) **0.643** | s08 GPU cut 0.04: 0.593 | s09 GPU cut 0.08: 0.639 | s08a CPU 0.322 | s08b CPU 0.353.
-Leaderboard top: 0.710 / 0.702 / 0.690. Best public notebook: 0.651.
+Leaderboard 2026-10-27 00:32 UTC: top 0.710 / 0.704 / 0.702; our best 0.643 = rank 171 / 3423; 108 teams >= 0.651, 10 teams >= 0.68. Best public notebook: 0.651.
+s10-s13 submitted 2026-10-27 00:01-00:25 UTC (scoring reruns ~8 h), s14 held for the reserved slot - see HANDOFF.md.
 
 ## Where the next gains are
 1. Post-processing (CPU, zero GPU): soft-cap marginal decoding (s11-s13) - proxy +0.012..+0.037 over the Hungarian.
