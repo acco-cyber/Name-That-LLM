@@ -73,3 +73,8 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
 * 2 NTL slots left for 10-28. Read s15 vs s14 (soft-cap), s16 vs s15 (cut), s17 vs s15 (ATLAS coverage) once scored
   (~08:00-12:00 UTC) and combine the winners in s18. If s17 > s15 notably, also try ATLAS budget 8.0 h with partial mode
   (safe now: it can only lose rows, not the member).
+
+## Update 2026-10-28 07:52 UTC (hourly run)
+* s15 scored **0.633** < s14 0.643 -> soft-cap decoding is harmful on the real stack; drop it (s16/s17 carry it too).
+* s18 = s14 + partial ATLAS with Hungarian kept, submitted slot 4/5 (ref 57729649). 1 NTL slot left for 10-28 - hold it
+  until s16/s17 score; use it (before 00:00 UTC) on the best Hungarian-based variant, e.g. s18 + cut 0.08 if s16 > s15.

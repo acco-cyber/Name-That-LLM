@@ -20,7 +20,7 @@ code competition, hidden test, 5 submissions / day, deadline 2027-01-14). Train:
 Daily log: see `notebooks/*/NOTES.md`.
 
 ## Scores so far (public LB, 2026-10-26)
-s07 (nlm-v27 fork, Llama skipped) **0.643** | s08 GPU cut 0.04: 0.593 | s09 GPU cut 0.08: 0.639 | s08a CPU 0.322 | s08b CPU 0.353.
+s07 (nlm-v27 fork, Llama skipped) **0.643** | s14 0.643 | s15 (soft-cap) 0.633 | s08 GPU cut 0.04: 0.593 | s09 GPU cut 0.08: 0.639 | s08a CPU 0.322 | s08b CPU 0.353.
 Leaderboard 2026-10-27 00:32 UTC: top 0.710 / 0.704 / 0.702; our best 0.643 = rank 171 / 3423; 108 teams >= 0.651, 10 teams >= 0.68. Best public notebook: 0.651.
 s10-s13 submitted 2026-10-27 00:01-00:25 UTC (scoring reruns ~8 h), s14 held for the reserved slot - see HANDOFF.md.
 

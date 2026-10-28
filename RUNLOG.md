@@ -9,3 +9,4 @@
 - 2026-10-28 05:06 UTC  hourly run: s15/s16/s17 still pending; no NTL slot used (2 of 10-28 held until s15-s17 score ~08:00-12:00 UTC, then combine winners in s18). Quantum v11 scored 22.340.
 - 2026-10-28 06:30 UTC  hourly run: s15/s16/s17 still pending; 2 NTL slots of 10-28 held (combine winners in s18 once scored). Quantum v12 submitted (somejoint C62 chem, ~22.375); SB sb05 submitted (holiday occupancy gate) + sb-lab-calib CPU kernel running.
 - 2026-10-28 07:12 UTC  hourly run: s15/s16/s17 still pending; 2 NTL slots of 10-28 held for s18 (combine winners once scored). Quantum v12 = 22.37455 (best). SB sb06 submitted.
+- 2026-10-28 07:52 UTC  s15 scored 0.633 (soft-cap -0.010 vs s14). s18-byod-hung-partial-atlas v1 (= s14 + partial ATLAS, Hungarian) submitted, ref 57729649 (10-28 NTL slot 4/5). 1 slot held for s16/s17 readout.
