@@ -12,3 +12,4 @@
 - 2026-10-28 07:52 UTC  s15 scored 0.633 (soft-cap -0.010 vs s14). s18-byod-hung-partial-atlas v1 (= s14 + partial ATLAS, Hungarian) submitted, ref 57729649 (10-28 NTL slot 4/5). 1 slot held for s16/s17 readout.
 - 2026-10-28 08:55 UTC  hourly run: s16 scored 0.614 (cut 0.08 under soft-cap: -0.019 vs s15) -> keep cut 0.15. s17/s18 pending; last 10-28 NTL slot held for the s18 readout (use before 00:00 UTC on s18 or s18 + ATLAS budget 8.0 h partial). No new public notebook above 0.652.
 - 2026-10-28 10:00 UTC  s19-whoami-shortcircuit v1 (fork of new top public 'Who am I?' + short-circuit, ATLAS 8.0 h) submitted, ref 57732758 (10-28 NTL slot 5/5 - NTL budget used). s17/s18 still pending. Quantum v13 scored 22.57336 (best).
+- 2026-10-28 11:55 UTC  hourly run: all 5 NTL slots of 10-28 used (s15-s19); s17/s18/s19 pending. No new public notebook above 'Who am I?' (latest: flexonafft reproduction, UltraBert). Nothing to submit until 00:00 UTC 10-29.
