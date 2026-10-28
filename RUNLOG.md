@@ -8,3 +8,4 @@
 - 2026-10-28 03:55 UTC  s17-byod-softcap-t05-partial-atlas v1 (= s15 + partial ATLAS: no all-or-nothing skip on projected overrun) submitted, ref 57722919 (10-28 NTL slot 3/5). s15/s16 still pending.
 - 2026-10-28 05:06 UTC  hourly run: s15/s16/s17 still pending; no NTL slot used (2 of 10-28 held until s15-s17 score ~08:00-12:00 UTC, then combine winners in s18). Quantum v11 scored 22.340.
 - 2026-10-28 06:30 UTC  hourly run: s15/s16/s17 still pending; 2 NTL slots of 10-28 held (combine winners in s18 once scored). Quantum v12 submitted (somejoint C62 chem, ~22.375); SB sb05 submitted (holiday occupancy gate) + sb-lab-calib CPU kernel running.
+- 2026-10-28 07:12 UTC  hourly run: s15/s16/s17 still pending; 2 NTL slots of 10-28 held for s18 (combine winners once scored). Quantum v12 = 22.37455 (best). SB sb06 submitted.
