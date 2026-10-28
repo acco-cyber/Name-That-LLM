@@ -78,3 +78,12 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
 * s15 scored **0.633** < s14 0.643 -> soft-cap decoding is harmful on the real stack; drop it (s16/s17 carry it too).
 * s18 = s14 + partial ATLAS with Hungarian kept, submitted slot 4/5 (ref 57729649). 1 NTL slot left for 10-28 - hold it
   until s16/s17 score; use it (before 00:00 UTC) on the best Hungarian-based variant, e.g. s18 + cut 0.08 if s16 > s15.
+
+## Update 2026-10-28 10:05 UTC (daily run)
+* New public top notebook found: romantamrazov "Name That LLM | Who am I?" (ranked first by public score, above the 0.652
+  lightningv08 notebook). Contains partial ATLAS + gated typography-Bayes post-correction on top of the same stack.
+* s19 = that notebook + our commit short-circuit + ATLAS 8.0 h, image 2757e0 (upstream's) - submitted with the last 10-28 slot,
+  ref 57732758. Expect ~0.654-0.66 if the image finishes in time.
+* Read-out plan (10-29): compare s19 vs s18 (both partial ATLAS; s19 adds typography correction + drops Hungarian + other image).
+  If s19 >= 0.654: build s20+ on s19 (ideas: typography marker set learnt on train+pool with LR instead of naive Bayes; gate
+  threshold 0.8 -> 0.6/1.0; evidence clip 0.35 -> 0.5). If s19 times out: re-pin it to 9a6bcf with ATLAS 7.8 h.
