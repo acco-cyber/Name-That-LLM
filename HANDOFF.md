@@ -66,3 +66,10 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
 * s16 = s15 + cluster cut 0.08 submitted (slot 2/5, ref 57721428). s15 and s16 score ~08:00-11:00 UTC.
 * 3 NTL slots left for 10-28. Next candidates (each one diff on s15, all zero-GPU short-circuit):
   tau 1.0 (s13 idea) / ATLAS budget back to 8.0 h / atlas_w 0.15.
+
+## Update 2026-10-28 03:55 UTC (hourly run)
+* Found that ATLAS was all-or-nothing: a projected overrun of `--atlas_budget` raised and dropped the member entirely.
+  s17 = s15 + partial ATLAS (stop at hard deadline, mix only on finished rows) submitted, slot 3/5, ref 57722919.
+* 2 NTL slots left for 10-28. Read s15 vs s14 (soft-cap), s16 vs s15 (cut), s17 vs s15 (ATLAS coverage) once scored
+  (~08:00-12:00 UTC) and combine the winners in s18. If s17 > s15 notably, also try ATLAS budget 8.0 h with partial mode
+  (safe now: it can only lose rows, not the member).
