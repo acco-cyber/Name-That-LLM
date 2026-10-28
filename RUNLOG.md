@@ -2,3 +2,4 @@
 - 2026-10-27 22:55 UTC  no NTL slot left for 10-27; s14 archived, handoff updated
 - 2026-10-27 23:44 UTC  s15-byod-softcap-t05 v1 committed (short-circuit); to be submitted with the first 10-28 NTL slot by this run
 - 2026-10-28 00:00 UTC  s15-byod-softcap-t05 v1 submitted, ref 57716199 (10-28 NTL slot 1/5), pending ~8 h
+- 2026-10-28 00:55 UTC  hourly run: no NTL slot used - s14/s15 still pending (~08:00 UTC); per handoff, hold remaining 4 slots until the pinned container is shown to finish in time. Quantum v9 submitted (~22.13 expected).
