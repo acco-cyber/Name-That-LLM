@@ -58,3 +58,11 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
   out, s15 does too. Next independent idea worth a slot meanwhile: CPU-side (zero GPU) changes on the pinned image only.
 * Quantum: v8 scored 22.009 (best). manwithacat 'The Real 150K' output is byte-identical to v8 (sha be8301da) - no
   public output ahead of us. LB 10-27 23:45: 25.629 / 24.465 / 24.159 / 23.895 / 23.800.
+
+## Update 2026-10-28 02:55 UTC (hourly run)
+* s14 scored **0.643** -> the pinned BYOD 9a6bcf image + ATLAS 7.8 h finishes in time. It equals s07 (0.643), so the
+  Llama member / public 0.651 recipe did not reproduce its gain on this image; the 0.008 gap is still unexplained
+  (candidates: ATLAS budget cut 8.3->7.8 h dropping rows, or Llama asset cache not loading - check the s14 rerun log).
+* s16 = s15 + cluster cut 0.08 submitted (slot 2/5, ref 57721428). s15 and s16 score ~08:00-11:00 UTC.
+* 3 NTL slots left for 10-28. Next candidates (each one diff on s15, all zero-GPU short-circuit):
+  tau 1.0 (s13 idea) / ATLAS budget back to 8.0 h / atlas_w 0.15.
