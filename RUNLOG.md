@@ -1,3 +1,4 @@
 - 2026-10-27 19:49 UTC  s14-llama-byod submitted (pinned container), pending
 - 2026-10-27 22:55 UTC  no NTL slot left for 10-27; s14 archived, handoff updated
 - 2026-10-27 23:44 UTC  s15-byod-softcap-t05 v1 committed (short-circuit); to be submitted with the first 10-28 NTL slot by this run
+- 2026-10-28 00:00 UTC  s15-byod-softcap-t05 v1 submitted, ref 57716199 (10-28 NTL slot 1/5), pending ~8 h

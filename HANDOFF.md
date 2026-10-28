@@ -50,3 +50,11 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
   (kirilltym Fresh32 is unscored and depends on private datasets, not forkable).
 * Coordination: runs fire hourly at :42 and can overlap. Check `kaggle competitions submissions` before
   every submit and append to RUNLOG.md.
+
+## Update 2026-10-28 00:01 UTC (hourly run)
+* s15 = s14 + soft-cap tau 0.5 submitted with 10-28 slot 1 (ref 57716199). s14 (pinned) and s15 now score in parallel,
+  so by ~08:00 UTC we know both whether the pinned container fits the time limit and the soft-cap delta (s15 - s14).
+* Remaining 10-28 NTL slots: 4. Do NOT spend them on more soft-cap/cut variants until s14/s15 score - if s14 times
+  out, s15 does too. Next independent idea worth a slot meanwhile: CPU-side (zero GPU) changes on the pinned image only.
+* Quantum: v8 scored 22.009 (best). manwithacat 'The Real 150K' output is byte-identical to v8 (sha be8301da) - no
+  public output ahead of us. LB 10-27 23:45: 25.629 / 24.465 / 24.159 / 23.895 / 23.800.
