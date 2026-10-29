@@ -113,3 +113,9 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
   **ntl-s25-v31-atlas20-dp v1** (Llama fallback = ilyass323 bf16, shard assertion PASS in commit). Submitted 07:00, ref 57762344 (slot 2/5).
 * Revised 10-29 queue (one per hourly run): s25 (slot 2, done) -> s21 (V40A sibling) -> s23 (sinkhorn 0.35) -> s24 (comp_w 0.25).
   s22 (V40A alpha 0.16) dropped from today's queue. Variants built on s25 (atlas20) are better bases than V31 for 10-30.
+
+## Update 2026-10-29 08:55 UTC (hourly run fired 08:42)
+* s26 = s21 (V40A sibling residual) + atlas_w 0.20 submitted, slot 3/5, ref 57765425. s21 itself is superseded (not submitted).
+* ozertuu "Public LB 0.666" = V31 code byte-identical to s20 apart from our gate/fallback -> a lucky rerun; no fork needed.
+* Remaining 10-29 queue (2 slots): s25-based variants beat V31-based ones -> rebuild s23/s24 ideas on s25 (sinkhorn 0.35, comp_w 0.25)
+  before submitting, or lightningv08 "0.661 Qwen3.8-27B LoRA + Spectral Ensemble" as an architecture-diverse probe.
