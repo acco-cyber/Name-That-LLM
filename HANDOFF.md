@@ -110,6 +110,6 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
 
 ## Update 2026-10-29 07:00 UTC (hourly run fired 06:42)
 * New public top: omerfarukmerey "0.663 | V31 + ATLAS 20%" (= V31 + dual-GPU 8B members + atlas_w 0.20). Forked as
-  **ntl-s25-v31-atlas20-dp v1** (Llama fallback = ilyass323 bf16, shard assertion PASS in commit). Submitted with slot 2/5.
+  **ntl-s25-v31-atlas20-dp v1** (Llama fallback = ilyass323 bf16, shard assertion PASS in commit). Submitted 07:00, ref 57762344 (slot 2/5).
 * Revised 10-29 queue (one per hourly run): s25 (slot 2, done) -> s21 (V40A sibling) -> s23 (sinkhorn 0.35) -> s24 (comp_w 0.25).
   s22 (V40A alpha 0.16) dropped from today's queue. Variants built on s25 (atlas20) are better bases than V31 for 10-30.

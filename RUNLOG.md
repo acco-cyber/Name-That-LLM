@@ -17,3 +17,4 @@
 - 2026-10-29 06:01 UTC  s20-v31-0660-gate v4 submitted, ref 57760754 (10-29 NTL slot 1/5). v1-v3 failed: Llama-3.1 gated model not mounted, deleted asset-cache kernel gone -> fallback public bf16 Llama-3.1-8B base dataset. s19 scored 0.654 (prior best). Public best now mercurydust V31 0.660. LB top 0.728/0.725/0.707.
 - 2026-10-29 06:15 UTC  s21-v40a-sibling-gate v1 committed (V40A sibling residual + gate), queued for slot 2/5.
 - 2026-10-29 06:35 UTC  s22 (V40A alpha 0.16), s23 (V31 sinkhorn 0.35), s24 (V31 comp_w 0.25) committed (placeholders OK). Queue for the rest of 10-29 in HANDOFF.md: s21 -> s23 -> s24 -> s22, one per hourly run.
+- 2026-10-29 07:00 UTC  s25-v31-atlas20-dp v1 (fork of new public top omerfarukmerey 0.663: V31 + dual-GPU 8B + atlas_w 0.20; Llama bf16 fallback, shard assert PASS) submitted, ref 57762344 (10-29 NTL slot 2/5). Next: s21 at >= 08:00, then s23, s24.
