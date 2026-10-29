@@ -87,3 +87,23 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
 * Read-out plan (10-29): compare s19 vs s18 (both partial ATLAS; s19 adds typography correction + drops Hungarian + other image).
   If s19 >= 0.654: build s20+ on s19 (ideas: typography marker set learnt on train+pool with LR instead of naive Bayes; gate
   threshold 0.8 -> 0.6/1.0; evidence clip 0.35 -> 0.5). If s19 times out: re-pin it to 9a6bcf with ATLAS 7.8 h.
+
+## Update 2026-10-29 06:35 UTC (hourly run fired 05:42)
+* **Llama-3.1-8B fix**: the gated meta-llama model does not mount on gwey1025 and the `deleted/140855160` asset-cache
+  kernel is gone, so every fork failed at `mdir('/llama-3.1/', '/8b/')`. All new notebooks fall back to the public
+  dataset `ilyass323/llama-3-1-8b-bf16` (base, not Instruct: eos 128001, shard sizes = meta-llama/Llama-3.1-8B).
+* Base for 10-29: mercurydust V31 (public 0.660, reproduced 0.660 by alexchilton). Commit gate everywhere (~3 GPU min/commit).
+* **Submission queue for 10-29 (one per hourly run, check `kaggle competitions submissions name-that-llm` first):**
+
+| order | kernel (all committed v1, COMPLETE, placeholder) | change | status |
+|---|---|---|---|
+| 1 | ntl-s20-v31-0660-gate **v4** | V31 as is | submitted 06:01, ref 57760754 |
+| 2 | ntl-s21-v40a-sibling-gate v1 | romantamrazov V40A sibling-style residual (max_alpha 0.08) | submit next (>= 07:00) |
+| 3 | ntl-s23-v31-sinkhorn035-gate v1 | V31, Sinkhorn 0.45 -> 0.35 | then |
+| 4 | ntl-s24-v31-compw025-gate v1 | V31, comp_w 0.15 -> 0.25 | then |
+| 5 | ntl-s22-v40a-alpha016-gate v1 | V40A, max_alpha 0.16 | last slot (or replace with a new public notebook > 0.660) |
+
+  Submit command: `kaggle competitions submit name-that-llm -k gwey1025/<kernel> -v <ver> -f submission.parquet -m "..."`.
+* Read-outs (~8 h after each submit): s20 sanity (~0.660; if << 0.66 the Llama bf16 copy is suspect -> drop ll8v5 member);
+  s21 - s20 = sibling residual; s23/s24 - s20 = balancing / complement direction; s22 - s21 = residual strength.
+* LB 10-29 05:45: 0.728 / 0.725 / 0.707 / 0.706 / 0.704; us 0.654 (rank ~231).
