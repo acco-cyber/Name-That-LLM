@@ -119,3 +119,17 @@ The 10-27 budget has ONE slot left. The next session (22:03 UTC) will see the s1
 * ozertuu "Public LB 0.666" = V31 code byte-identical to s20 apart from our gate/fallback -> a lucky rerun; no fork needed.
 * Remaining 10-29 queue (2 slots): s25-based variants beat V31-based ones -> rebuild s23/s24 ideas on s25 (sinkhorn 0.35, comp_w 0.25)
   before submitting, or lightningv08 "0.661 Qwen3.8-27B LoRA + Spectral Ensemble" as an architecture-diverse probe.
+
+## Update 2026-10-30 19:25 UTC
+* s26 (ref 57765425) = **timeout** ("exceeded the allowed runtime", visible via the API field `error_description`;
+  the CLI table hides it - use `KaggleApi().competition_submissions('name-that-llm')`). Not a V40A bug.
+* Pre-infer time is not small any more: the s28 commit log shows the Llama bf16 copy took 314 s and 665 s elapsed before
+  infer.py started; the old ATLAS budget (8.3 h - COMP_SEC - 600 s from infer start) ignored it. s28 adds a global cap
+  (ATLAS stops 8.15 h after notebook start). Use this cap in every future variant.
+* No public notebook has a verified score above 0.663 (as of 10-30 18:45). synthreaper "0.670+" is s25 + V40A, unscored.
+  lightningv08 Qwen3.8-27B full-text member at 7.5% = 0.662 (no gain over s25). Identical code varies up to 0.009.
+* Hidden test structure: train is 150 prompts x 18 models; public evidence (s08 cut 0.04 -> 0.593, Hungarian hurts on
+  every base, GoPain: 2-answers-per-prompt OOF tracks LB) says the test is NOT complete 18-answer groups -> group-decoding
+  tricks are exhausted; gains must come from per-passage models.
+* s28 = s25 + V40A (0.08) + global deadline, submitted 10-30 slot 1/5, ref 57814920. Read-out ~03:30 UTC 10-31.
+  If s28 >= 0.664 and no timeout: V40A stays; next probe max_alpha 0.16 (proxy +0.0007 more).
